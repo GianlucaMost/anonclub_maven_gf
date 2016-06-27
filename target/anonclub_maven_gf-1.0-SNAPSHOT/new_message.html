@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="main.css" media="screen" title="no title" charset="utf-8">
+    <title> anonclub </title>
+  </head>
+  <body>
+    <nav>
+      <a href="index.jsp" title="home">
+        <img class="brand" src="logo.png" alt="Logo" />
+      </a>
+      <a href="vorstand.html"> Vorstand </a>
+      <a href="new_message.html"> Neue Nachricht</a>
+    </nav>
+
+    <h1>Neue Nachricht</h1>
+    <form action="myServlet" method="GET" id="form1">
+      <fieldset>
+        <legend>Personendaten</legend>
+        <label for="Vorname">Vorname: </label>
+        <br>
+        <input type="text" id="Vorname" name="Vorname" pattern="^[a-zA-Z]*$" autofocus="autofocus" required>
+        <br>
+        <label for="Nachname">Nachname: </label>
+        <br>
+        <input type="text" id="Nachname" name="Nachname" pattern="^[a-zA-Z]*$" required>
+        <br>
+        <label for="Mail">Mail: </label>
+        <br>
+        <input type="text" id="Mail" name="Mail" required>
+        <br>
+      </fieldset>
+       <fieldset>
+         <legend>Metadaten</legend>
+         <label for="Datum">Datum: </label>
+         <br>
+         <input type="date" id="Datum" name="Datum">
+         <br>
+         <label for="Kategorie">Kategorie: </label>
+         <br>
+         <select name="Kategorie" size="3" id="Kategorie">
+            <option value="Technik">Technik</option>
+            <option value="Admin">Admin</option>
+            <option value="Sonstiges">Sonstiges</option>
+         </select>
+       </fieldset>
+       <fieldset>
+         <legend>Nachricht</legend>
+         <label for="Ueberschrift">Überschrift: </label>
+         <br>
+         <input type="text" id="Ueberschrift" name="Ueberschrift" required>
+         <br>
+         <label for="Nachricht">Nachricht: </label>
+         <br>
+         <textarea name="Nachricht" rows="8" cols="40" id="Nachricht" required></textarea>
+       </fieldset>
+       <button type="reset">Zurücksetzen</button>
+       <button type="submit">Senden</button>
+    </form>
+
+    <footer>
+      <a href="#"> Rechtliche Hinweise </a>
+    </footer>
+  </body>
+</html>
