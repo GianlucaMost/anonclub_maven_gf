@@ -41,8 +41,8 @@
                             for(var i=j; i<array.length; i++){
                                 var $neuesElement = $("<li>"); 
                                 $neuesElement.html("<b>"+ array[i].date +" schrieb "+ array[i].name + "</b><br>" +array[i].message);
+                                $neuesElement.fadeIn(2000);
                                 $("#liste").append($neuesElement);
-                                $neuesElement.fadeIn();
                                 j++;
                             }
                         }
@@ -50,7 +50,7 @@
                 } 
 
                 $("#aktualisieren").click(function(){
-                    setInterval(anzeigen, 3000);
+                    setInterval(anzeigen, 500);
                 });
             });
         </script>
